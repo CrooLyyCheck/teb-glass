@@ -1,8 +1,11 @@
-# Tryb developerski z hot-reload (Vite)
-# Zmiany w src/ są widoczne natychmiast w przeglądarce.
+# Tryb developerski z hot-reload (Vite + Strapi)
+# Zmiany w src/ i cms/ są widoczne natychmiast.
 #
 # Użycie:
 #   docker compose -f docker-compose.dev.yml up --build
+#
+# Przed pierwszym uruchomieniem:
+#   cp cms/.env.example cms/.env               # uzupełnij klucze Strapi
 
 services:
   app:
@@ -15,3 +18,52 @@ services:
       - .:/app
       - /app/node_modules
     restart: unless-stopped
+    depends_on:
+      - strapi
+
+  strapi:
+    build:
+      context: ./cms
+      dockerfile: Dockerfile.dev
+    container_name: teb-glass-strapi-dev
+    restart: unless-stopped
+    env_file:
+      - path: ./cms/.env
+        required: false
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: ${POSTGRES_DB:-strapi}
+      DATABASE_USERNAME: ${POSTGRES_USER:-strapi}
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD:-strapi}
+      NODE_ENV: development
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./cms:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: teb-glass-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-strapi}
+      POSTGRES_USER: ${POSTGRES_USER:-strapi}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-strapi}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data-dev:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-strapi} -d ${POSTGRES_DB:-strapi}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data-dev:

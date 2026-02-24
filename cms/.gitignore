@@ -1,0 +1,8 @@
+.tmp
+.cache
+dist
+build
+exports
+*.log
+.env
+node_modules

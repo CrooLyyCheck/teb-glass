@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json* ./
+RUN npm install --legacy-peer-deps
+
+COPY . .
+
+ENV NODE_ENV=development
+ENV DATABASE_CLIENT=postgres
+
+EXPOSE 1337
+
+CMD ["npm", "run", "develop"]

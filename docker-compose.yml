@@ -4,6 +4,10 @@
 # Użycie:
 #   docker compose up -d
 #   docker compose pull && docker compose up -d   # aktualizacja obrazu
+#
+# Przed pierwszym uruchomieniem:
+#   cp .env.example .env                       # uzupełnij hasła
+#   cp cms/.env.example cms/.env               # uzupełnij klucze Strapi
 
 services:
   app:
@@ -11,3 +15,51 @@ services:
     ports:
       - "80:80"
     restart: unless-stopped
+    depends_on:
+      strapi:
+        condition: service_started
+
+  strapi:
+    build:
+      context: ./cms
+      dockerfile: Dockerfile
+    container_name: teb-glass-strapi
+    restart: unless-stopped
+    env_file:
+      - path: ./cms/.env
+        required: false
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: ${POSTGRES_DB:-strapi}
+      DATABASE_USERNAME: ${POSTGRES_USER:-strapi}
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD:-strapi}
+      NODE_ENV: production
+    ports:
+      - "1337:1337"
+    volumes:
+      - strapi-uploads:/app/public/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: teb-glass-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-strapi}
+      POSTGRES_USER: ${POSTGRES_USER:-strapi}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-strapi}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-strapi} -d ${POSTGRES_DB:-strapi}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:
+  strapi-uploads:
