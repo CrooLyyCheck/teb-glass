@@ -1,0 +1,6 @@
+.tips{padding:var(--space-12) 0}.tips h2{margin-bottom:var(--space-4)}
+.tips__intro{margin-bottom:var(--space-6)}
+.tips__list{list-style:none;padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4)}
+.tips__item{display:flex;gap:var(--space-3);align-items:flex-start;color:var(--text-muted)}
+.tips__bullet{color:var(--accent);flex-shrink:0;margin-top:3px}
+.tips__outro{margin-top:var(--space-6);font-weight:500;color:var(--accent)}

@@ -1,0 +1,148 @@
+{
+  "site": {
+    "name": "🐇",
+    "logo": {
+      "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/4775505-1.png",
+      "alt": "🐇"
+    },
+    "nav": [
+      {
+        "label": "Strona główna",
+        "to": "/"
+      },
+      {
+        "label": "Studio fotograficzne",
+        "to": "/studio-fotograficzne"
+      },
+      {
+        "label": "O mnie",
+        "to": "/o-mnie-2"
+      }
+    ],
+    "footer": "Wszelkie prawa zastrzeżone"
+  },
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "🐇",
+        "description": "Strona fotograficzna – portfolio i porady"
+      },
+      "hero": {
+        "heading": "Strona główna",
+        "body": "Witam Cię na stronie znajdziesz na niej dwie sekcje:\n– o mnie\n– o poradach, jak zrobić swoje wymarzone studio fotograficzne"
+      },
+      "gallery": {
+        "heading": "Galeria",
+        "images": [
+          "https://teb.croolyy.com/wp-content/uploads/2026/02/nBU5yh-1-1024x640.webp",
+          "https://teb.croolyy.com/wp-content/uploads/2026/02/HD-wallpaper-cute-bunnies-cute-rabbit-flower-bunny-rodent.jpg",
+          "https://teb.croolyy.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-24-at-14.25.59-1024x463.jpeg",
+          "https://teb.croolyy.com/wp-content/uploads/2026/02/weird_wonderful_bunnies_header_update_1140.avif",
+          "https://teb.croolyy.com/wp-content/uploads/2026/02/thumb-1920-789721-1-1024x683.jpg"
+        ]
+      }
+    },
+    "o-mnie-2": {
+      "seo": {
+        "title": "O mnie – 🐇",
+        "description": "Angelina Vysotska – pasjonatka fotografii"
+      },
+      "bio": {
+        "heading": "O mnie - Angelina Vysotska",
+        "subheading": "Kim jestem?",
+        "body": "Pasjonatką fotografii z niezwykłym podejściem do każdej sesji. Urodziłam się w sercu miasta, gdzie odkryłam swoją miłość do fotografii.",
+        "photo": "https://teb.croolyy.com/wp-content/uploads/2026/02/476867363_1160451335865522_1501422884474309151_n.jpg"
+      },
+      "timeline": {
+        "heading": "Oś czasu - Kluczowe wydarzenia z mojego życia",
+        "sectionLabel": "Ważne momenty",
+        "intro": "Na tej osi czasu znajdziesz wydarzenia z mojego życia. Oczywiście wcale nie zmyślone 😊",
+        "items": [
+          {
+            "date": "1 Styczeń 2057",
+            "text": "To tutaj wszystko się zaczęło, mała ja, co ledwo przyszła na świat jeszcze nie wiedziała co na mnie czeka"
+          },
+          {
+            "date": "24 Luty 2077",
+            "text": "Podjęłam się współpracy z lokalnymi artystami, tworząc inspirujące projekty fotograficzne przedstawiające ich rysujących"
+          },
+          {
+            "date": "29 Maj 2077",
+            "text": "Uczestniczyłam w międzynarodowej konferencji na temat fotografii, prezentując swoje prace."
+          },
+          {
+            "date": "15 Czerwiec 2077",
+            "text": "Otrzymałam nagrodę za najlepsze zdjęcie roku w kategorii sztuka, co stało się ważnym krokiem w jej karierze."
+          }
+        ]
+      },
+      "contact": {
+        "heading": "Skontaktuj się ze mną",
+        "body": "Chcesz dowiedzieć się więcej lub nawiązać kontakt? Napisz bezpośrednio do mnie!",
+        "cta": {
+          "label": "Napisz do mnie",
+          "href": "mailto:dla.szkoly2023@gmail.com"
+        }
+      }
+    },
+    "studio-fotograficzne": {
+      "seo": {
+        "title": "Studio fotograficzne – 🐇",
+        "description": "Porady o oświetleniu i budowie studia fotograficznego"
+      },
+      "hero": {
+        "heading": "Studio fotograficzne"
+      },
+      "equipment": {
+        "heading": "Na początek - Co potrzebujesz?",
+        "paragraphs": [
+          "Aby stworzyć profesjonalne studio fotograficzne, konieczne jest zastosowanie odpowiedniego sprzętu oraz przemyślanej aranżacji przestrzeni.",
+          "Oprócz sprzętu, istotne jest odpowiednie rozmieszczenie elementów w przestrzeni. Dobrze zorganizowane studio zapewnia wygodę pracy i wysoką jakość zdjęć."
+        ]
+      },
+      "theory": {
+        "heading": "Na początek - teoria",
+        "intro": "Oto kilka prostych zasad, które pomogą uzyskać lepsze efekty fotograficzne:",
+        "items": [
+          "Zwróć uwagę na naturalne światło – próbuj wykorzystać je jak najwięcej podczas sesji.",
+          "Używaj odbłyśników, aby zmiękczyć cień i rozjaśnić twarz modela.",
+          "Eksperymentuj z różnymi ustawieniami oświetlenia, aby znaleźć idealny balans w zależności od scenerii.",
+          "Pamiętaj o regulacji mocy lamp, co pozwoli na uzyskanie odpowiedniego nasycenia kolorów."
+        ],
+        "outro": "Te kilka wskazówek pomoże zabrać Twoje zdjęcia na wyższy poziom!"
+      },
+      "lighting": {
+        "heading": "Oświetlenie... oświetlenie i jeszcze raz oświetlenie",
+        "paragraphs": [
+          "Oświetlenie jest kluczowym elementem w fotografii. Wybór odpowiednich źródeł światła i ich umiejscowienie mogą znacząco wpłynąć na jakość Twoich zdjęć.",
+          "– Zrozum, jak naturalne światło wpływa na obrazy. Zaobserwuj, jak zmiany w oświetleniu podczas dnia oddziałują na kolory i cienie w Twoich zdjęciach."
+        ]
+      },
+      "faq": {
+        "heading": "Podsumowując",
+        "items": [
+          {
+            "q": "Jakie oświetlenie wybrać na początek?",
+            "a": "Na początek warto zainwestować w podstawowe lampy LED lub lampy błyskowe, które są uniwersalne i elastyczne. W miarę jak rozwijasz swoje umiejętności, być może zdecydujesz się na bardziej zaawansowane rozwiązania jak softboxy czy reflektory paraboliczne."
+          },
+          {
+            "q": "Jak ustawić światło do portretu?",
+            "a": "Najlepszym podejściem do fotografii portretowej jest zastosowanie światła miękkiego, które łagodzi rysy twarzy. Możesz użyć softboxa lub okna jako źródła światła. Eksperymentuj z wysokością i odległością lampy."
+          },
+          {
+            "q": "Jakie są podstawowe źródła światła?",
+            "a": "Wśród najpopularniejszych źródeł światła w fotografii wymienia się światło naturalne, lampy błyskowe oraz lampy sztuczne (LED, fluorescencyjne). Odpowiednia kombinacja pozwoli uzyskać różnorodne efekty."
+          },
+          {
+            "q": "Jak mierzyć światło?",
+            "a": "Warto zainwestować w ekspozytor lub korzystać z wbudowanego w aparat miernika światła. Kluczem jest zrozumienie, jak różne ustawienia (ISO, przysłona, czas naświetlania) wpływają na ekspozycję."
+          },
+          {
+            "q": "Jak poprawić jakość zdjęć?",
+            "a": "Zwróć szczególną uwagę na oświetlenie. Staraj się unikać ostrych cieni i prześwietleń. Eksperymentuj z różnymi kątami i odległościami od źródła światła."
+          }
+        ]
+      }
+    }
+  }
+}
