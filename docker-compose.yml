@@ -1,0 +1,13 @@
+# Uruchamia gotowy obraz z GitHub Container Registry (ghcr.io)
+# Nie wymaga budowania lokalnie.
+#
+# Użycie:
+#   docker compose up -d
+#   docker compose pull && docker compose up -d   # aktualizacja obrazu
+
+services:
+  app:
+    image: ghcr.io/croolycheck/teb-glass:latest
+    ports:
+      - "80:80"
+    restart: unless-stopped
