@@ -1,4 +1,14 @@
 node_modules
 dist
-.DS_Store
-*.local
+
+# Strapi CMS
+cms/.tmp
+cms/.cache
+cms/dist
+cms/build
+cms/exports
+cms/.env
+cms/node_modules
+
+# Zmienne środowiskowe
+.env
