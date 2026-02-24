@@ -1,0 +1,46 @@
+{
+  "slug": "o-mnie-2",
+  "title": "O mnie",
+  "url": "https://teb.croolyy.com/o-mnie-2/",
+  "headings": [
+    { "tag": "h1", "text": "O mnie" },
+    { "tag": "h2", "text": "O mnie - Angelina Vysotska" },
+    { "tag": "h2", "text": "Kim jestem?" },
+    { "tag": "h2", "text": "Oś czasu - Kluczowe wydarzenia z mojego życia" },
+    { "tag": "h3", "text": "1 Styczeń 2057" },
+    { "tag": "h3", "text": "24 Luty 2077" },
+    { "tag": "h3", "text": "29 Maj 2077" },
+    { "tag": "h3", "text": "15 Czerwiec 2077" },
+    { "tag": "h2", "text": "Skontaktuj się ze mną" }
+  ],
+  "sections": [
+    { "id": "page-hero", "type": "page-hero", "heading": "O mnie" },
+    {
+      "id": "about", "type": "about-split",
+      "heading": "O mnie - Angelina Vysotska",
+      "photo": {
+        "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/476867363_1160451335865522_15.jpg",
+        "alt": "Angelina Vysotska"
+      },
+      "bio": "Pasjonatką fotografii z niezwykłym podejściem do każdej sesji. Urodziłam się w sercu miasta, gdzie odkryłam swoją miłość do uchwytywania chwili. W każdej fotografii zamykam emocje i historie, które opowiadają o ludziach i miejscach."
+    },
+    {
+      "id": "timeline", "type": "timeline",
+      "heading": "Oś czasu - Kluczowe wydarzenia z mojego życia",
+      "note": "Na tej osi czasu znajdziesz wydarzenia z mojego życia. Oczywiście wcale nie zmyślone. Każdy z tych momentów miał wpływ na jej rozwój oraz karierę.",
+      "events": [
+        { "date": "1 Styczeń 2057",   "text": "To tutaj wszystko się zaczęło, mała ja, co ledwo przyszła na świat jeszcze nie wiedziała co na mnie czeka." },
+        { "date": "24 Luty 2077",     "text": "Podjęłam się współpracy z lokalnymi artystami, tworząc inspirujące projekty fotograficzne przedstawiające ich rysujących w pięknej scenerii." },
+        { "date": "29 Maj 2077",      "text": "Uczestniczyłam w międzynarodowej konferencji na temat fotografii, prezentując swoje prace." },
+        { "date": "15 Czerwiec 2077", "text": "Otrzymałam nagrodę za najlepsze zdjęcie roku w kategorii sztuka, co stało się ważnym krokiem w jej karierze." }
+      ]
+    },
+    {
+      "id": "contact", "type": "contact-cta",
+      "heading": "Skontaktuj się ze mną",
+      "body": "Chcesz dowiedzieć się więcej lub nawiązać kontakt? Napisz bezpośrednio do mnie!",
+      "cta": { "label": "Napisz do mnie", "href": "mailto:dla.szkoly2023@gmail.com" }
+    }
+  ],
+  "footer": { "copyright": "Wszelkie prawa zastrzeżone" }
+}

@@ -1,0 +1,18 @@
+{
+  "fonts": [
+    "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap&subset=latin-ext",
+    "https://fonts.googleapis.com/css?family=Figtree:300,400,500,600,700&display=swap&subset=latin-ext"
+  ],
+  "favicon": "https://teb.croolyy.com/wp-content/uploads/2026/02/4775505-1.png",
+  "images": {
+    "logo":    "https://teb.croolyy.com/wp-content/uploads/2026/02/4775505-1.png",
+    "profile": "https://teb.croolyy.com/wp-content/uploads/2026/02/476867363_1160451335865522_15.jpg",
+    "gallery": [
+      "https://teb.croolyy.com/wp-content/uploads/2026/02/nBU5yh-1-1024x640.webp",
+      "https://teb.croolyy.com/wp-content/uploads/2026/02/HD-wallpaper-cute-bunnies-cute-rabbit-flower-bunny-rodent.jpg",
+      "https://teb.croolyy.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-24-at-14.25.59.jpeg",
+      "https://teb.croolyy.com/wp-content/uploads/2026/02/weird_wonderful_bunnies_header_update_1140.jpg",
+      "https://teb.croolyy.com/wp-content/uploads/2026/02/thumb-1920-789721-1-1024x683.webp"
+    ]
+  }
+}

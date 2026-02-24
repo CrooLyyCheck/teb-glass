@@ -1,0 +1,8 @@
+{
+  "base_url": "https://teb.croolyy.com",
+  "pages": [
+    { "slug": "home",                "path": "/",                        "title": "🐇",                    "wp_id": 55 },
+    { "slug": "studio-fotograficzne", "path": "/studio-fotograficzne/",  "title": "Studio fotograficzne",  "wp_id": 54 },
+    { "slug": "o-mnie-2",             "path": "/o-mnie-2/",               "title": "O mnie",               "wp_id": 49 }
+  ]
+}

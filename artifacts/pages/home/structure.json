@@ -1,0 +1,37 @@
+{
+  "slug": "home",
+  "title": "🐇",
+  "url": "https://teb.croolyy.com/",
+  "headings": [
+    { "tag": "h1", "text": "Strona główna" },
+    { "tag": "h2", "text": "Galeria" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "content": "Witam Cię na stronie znajdziesz na niej dwie sekcje: – o mnie – o poradach, jak zrobić swoje wymarzone studio fotograficzne."
+    },
+    {
+      "id": "gallery",
+      "type": "image-carousel",
+      "heading": "Galeria",
+      "images": [
+        { "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/nBU5yh-1-1024x640.webp",                              "alt": "nBU5yh" },
+        { "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/HD-wallpaper-cute-bunnies-cute-rabbit-flower-bunny-rodent.jpg", "alt": "HD wallpaper cute bunnies" },
+        { "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-24-at-14.25.59.jpeg",           "alt": "WhatsApp Image 2026-02-24" },
+        { "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/weird_wonderful_bunnies_header_update_1140.jpg",       "alt": "weird wonderful bunnies header" },
+        { "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/thumb-1920-789721-1-1024x683.webp",                    "alt": "thumb 1920 789721" }
+      ]
+    },
+    {
+      "id": "cta-links",
+      "type": "cta-grid",
+      "items": [
+        { "label": "Studio fotograficzne - porady", "href": "/studio-fotograficzne" },
+        { "label": "O mnie",                        "href": "/o-mnie" }
+      ]
+    }
+  ],
+  "footer": { "copyright": "Wszelkie prawa zastrzeżone" }
+}
