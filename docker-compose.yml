@@ -1,9 +1,9 @@
-# Uruchamia gotowy obraz z GitHub Container Registry (ghcr.io)
+# Uruchamia gotowe obrazy z GitHub Container Registry (ghcr.io)
 # Nie wymaga budowania lokalnie.
 #
 # Użycie:
 #   docker compose up -d
-#   docker compose pull && docker compose up -d   # aktualizacja obrazu
+#   docker compose pull && docker compose up -d   # aktualizacja obrazów
 #
 # Przed pierwszym uruchomieniem:
 #   cp .env.example .env                       # uzupełnij hasła
@@ -20,9 +20,7 @@ services:
         condition: service_started
 
   strapi:
-    build:
-      context: ./cms
-      dockerfile: Dockerfile
+    image: ghcr.io/croolycheck/teb-glass/strapi:latest
     container_name: teb-glass-strapi
     restart: unless-stopped
     env_file:
