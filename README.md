@@ -1,71 +1,146 @@
-# teb-glass-app
+## WWW – uniwersalny starter (React + Strapi)
 
-Reimplementacja **teb.croolyy.com** w React z Apple Glass UI.
+Uniwersalny projekt strony internetowej oparty o:
 
-## Uruchomienie lokalne
+- **frontend**: React + Vite (SPA z routingiem)
+- **headless CMS**: Strapi v5 (panel admina w przeglądarce, REST API)
+- **baza**: Postgres (przez Docker)
+
+Możesz z niego zbudować dowolny landing / stronę www, edytując wszystko w GUI CMS.
+
+---
+
+## 1. Uruchomienie lokalne (bez Dockera)
+
+### 1.1. CMS (Strapi v5)
 
 ```bash
+cd cms
 npm install
-npm run dev       # → http://localhost:5173
-npm run build     # produkcja → ./dist
-npm run preview   # podgląd buildu
+cp .env.example .env   # uzupełnij wymagane klucze (APP_KEYS itd.)
+npm run develop        # http://localhost:1337/admin
 ```
 
-## Docker
+Przy pierwszym uruchomieniu:
 
-### Produkcja — obraz z GHCR
+- wejdź na `http://localhost:1337/admin`
+- załóż konto administratora
 
-Obraz jest automatycznie budowany i publikowany na [ghcr.io/croolycheck/teb-glass](https://github.com/CrooLyyCheck/teb-glass/pkgs/container/teb-glass) przy każdym pushu do `main`.
+W kodzie Strapi jest dodany uniwersalny model:
+
+- **Content type `Page`** (`page`):
+  - `title`, `slug`, `seoTitle`, `seoDescription`
+  - `sections` – dynamic zone z komponentami:
+    - `sections.hero`
+    - `sections.content-block`
+    - `sections.gallery`
+    - `sections.timeline`
+    - `sections.faq`
+
+W panelu:
+
+- utwórz kilka wpisów typu **Page**, np.:
+  - `home`
+  - `o-mnie-2`
+  - `studio-fotograficzne`
+
+### 1.2. Frontend (React + Vite)
+
+W drugim terminalu:
 
 ```bash
-# Pobierz i uruchom (port 80)
-docker compose up -d
-
-# Aktualizacja do najnowszego obrazu
-docker compose pull && docker compose up -d
-
-# Zatrzymanie
-docker compose down
+cd .
+npm install
+echo VITE_CMS_URL=http://localhost:1337 > .env.local
+npm run dev           # http://localhost:5173
 ```
 
-Aplikacja dostępna pod: **http://localhost**
+Frontend pobiera teraz treści z CMS:
 
-### Tryb developerski (hot-reload)
+- dla `/` ładuje `Page` o `slug = home`
+- dla `/o-mnie-2` ładuje `Page` o `slug = o-mnie-2`
+- dla `/studio-fotograficzne` ładuje `Page` o `slug = studio-fotograficzne`
+
+Istniejące komponenty (`Hero`, `Gallery`, `Timeline` itd.) można stopniowo dostosowywać,
+aby czytały dane ze `sections` z CMS – aktualny kod pozwala na łagodne przejście
+ze statycznego JSON-a na treści dynamiczne.
+
+---
+
+## 2. Tryb developerski w Dockerze (hot-reload)
 
 ```bash
+cp cms/.env.example cms/.env   # uzupełnij klucze Strapi
 docker compose -f docker-compose.dev.yml up --build
 ```
 
-Aplikacja dostępna pod: **http://localhost:5173**  
-Zmiany w `src/` są widoczne natychmiast bez przebudowywania obrazu.
+Adresy:
 
-### Pliki Docker
+- frontend: **http://localhost:5173**
+- CMS (Strapi): **http://localhost:1337/admin**
+- Postgres: **localhost:5432**
 
-| Plik | Opis |
-|---|---|
-| `Dockerfile` | Multi-stage build: Node 20 → Nginx 1.25 |
-| `Dockerfile.dev` | Dev server Vite z hot-reload |
-| `docker-compose.yml` | Produkcja — używa obrazu z GHCR |
-| `docker-compose.dev.yml` | Development — buduje lokalnie |
-| `nginx.conf` | Konfiguracja Nginx (SPA routing) |
-| `.dockerignore` | Pliki wykluczone z obrazu |
+Zmiany w `src/` oraz `cms/` są widoczne natychmiast (hot-reload).
 
-## Deploy (Vercel / Netlify)
-Build command: `npm run build` | Output dir: `dist`  
-Dodaj regułę rewrite SPA: `/* → /index.html`
+---
 
-## Struktura projektu
+## 3. Produkcja w Dockerze
+
+Plik `docker-compose.yml` zakłada użycie gotowych obrazów z GHCR.
+W nowym repo (np. `CrooLyyCheck/www`) możesz:
+
+- ustawić budowanie obrazów:
+  - `ghcr.io/croolycheck/www:latest` – frontend (z `Dockerfile`)
+  - `ghcr.io/croolycheck/www/strapi:latest` – CMS (z `cms/Dockerfile`)
+- a następnie uruchamiać:
+
+```bash
+docker compose up -d
+docker compose pull && docker compose up -d   # aktualizacja
+docker compose down
 ```
+
+Aplikacja będzie dostępna pod: **http://localhost** (frontend), a CMS pod **http://localhost:1337/admin**.
+
+---
+
+## 4. Struktura projektu
+
+```text
 src/
 ├── ui/          tokens.css + global.css
 ├── hooks/       useFadeIn + useReduceTransparency
 ├── components/  NavBar, Footer, Hero, Gallery, Bio,
 │                Timeline, Accordion, TipsList, ContactSection
 └── pages/       Home, OmniePage, StudioPage
-spec/            content-model.json (jedyne źródło treści)
-artifacts/       sitemap.json, structure.json × 3
+cms/
+└── src/
+    ├── api/page/content-types/page/schema.json        # content type Page
+    └── components/sections/*.json                     # komponenty sekcji (hero, gallery, faq, timeline…)
+docker-compose*.yml   # dev + prod
+Dockerfile*           # build frontend + CMS
 ```
 
-## Tryb bez przezroczystości
-Ikona ◼/◻ w navbarze. Persystuje w localStorage.  
-Respektuje preferencję systemową `prefers-reduced-transparency`.
+---
+
+## 5. Utworzenie nowego repo GitHub `CrooLyyCheck/www`
+
+Zakładając, że to repo jest obecnie klonem `teb-glass`:
+
+1. Na GitHubie utwórz puste repo **`CrooLyyCheck/www`**.
+2. Lokalnie przygotuj nowy katalog na bazie tego projektu:
+
+   ```bash
+   cd c:\Users\crly
+   git clone https://github.com/CrooLyyCheck/teb-glass.git www
+   cd www
+   git remote remove origin
+   git remote add origin git@github.com:CrooLyyCheck/www.git
+   git push -u origin main
+   ```
+
+3. Od tego momentu `www` jest Twoim uniwersalnym starterem:
+   - edytujesz treści w panelu Strapi,
+   - frontend pobiera strony po `slug` z CMS,
+   - całość działa lokalnie lub przez Dockera / dowolny hosting kontenerów.
+

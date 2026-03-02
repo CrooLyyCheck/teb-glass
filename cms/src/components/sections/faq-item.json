@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_faq_items",
+  "info": {
+    "displayName": "FAQ item",
+    "description": "Pojedyncze pytanie i odpowiedź"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "richtext"
+    }
+  }
+}
+
