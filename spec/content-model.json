@@ -79,7 +79,7 @@
       "contact": {
         "heading": "Skontaktuj się ze mną",
         "body": "Chcesz dowiedzieć się więcej lub nawiązać kontakt? Napisz bezpośrednio do mnie!",
-        "noFormReason": "Ponieważ wystawia to na ryzyko spamu, botów, koszt utrzymania serwera pocztowego (do wysyłki na adres który został podany w formularzu).",
+        "noFormReason": "Ponieważ wystawia to na ryzyko spamu, botów, podszywania się za pomocą maila użytego do wysłania maila. Dodatkowo to koszt utrzymania serwera pocztowego.",
         "cta": {
           "label": "Napisz do mnie",
           "href": "mailto:dla.szkoly2023@gmail.com"
