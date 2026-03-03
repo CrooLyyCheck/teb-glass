@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_timelines",
+  "info": {
+    "displayName": "Timeline",
+    "description": "Oś czasu z listą wydarzeń"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.timeline-item"
+    }
+  }
+}
+

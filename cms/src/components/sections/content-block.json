@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_content_blocks",
+  "info": {
+    "displayName": "Content block",
+    "description": "Sekcja z nagłówkiem, tekstem i obrazem"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
+

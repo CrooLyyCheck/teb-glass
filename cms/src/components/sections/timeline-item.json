@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_timeline_items",
+  "info": {
+    "displayName": "Timeline item",
+    "description": "Pojedynczy wpis osi czasu"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}
+
