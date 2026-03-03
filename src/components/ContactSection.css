@@ -2,7 +2,7 @@
 .contact__card{padding:var(--space-10);text-align:center;display:flex;flex-direction:column;align-items:center;gap:var(--space-5)}
 .contact__card h2{margin-bottom:0}
 .contact__actions{display:flex;justify-content:center;align-items:center;gap:var(--space-4);flex-wrap:wrap}
-.contact__cta{font-size:var(--text-base);padding:var(--space-4) var(--space-8);min-width:12.5rem;text-align:center}
+.contact__cta{font-size:var(--text-base);padding:var(--space-4) var(--space-8);min-width:12.5rem;text-align:center;justify-content:center}
 .contact__note{margin:0;max-width:58ch;font-size:var(--text-sm);line-height:var(--leading-loose);color:var(--text);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:var(--space-4) var(--space-5)}
 @media (max-width: 640px){
   .contact__actions{flex-direction:column;width:100%}
