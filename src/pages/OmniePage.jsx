@@ -4,7 +4,7 @@ import Bio from '../components/Bio'
 import Timeline from '../components/Timeline'
 import ContactSection from '../components/ContactSection'
 export default function OmniePage({ data }) {
-  const noFormReason = data?.contact?.noFormReason || 'Strona nie zawiera formularza internetowego głównie ze względu na Spam i Boty: masowe wysyłanie formularzy kontaktowych przeciąża serwer i zaśmieca skrzynki mailowe.'
+  const noFormReason = data?.contact?.noFormReason || 'Strona nie zawiera formularza internetowego (głownie Spam i Boty: Masowe wysyłanie formularzy kontaktowych, przeciążające serwer i zaśmiecające skrzynki mailowe).'
 
   useEffect(() => { document.title = 'O mnie – 🐇' }, [])
   return (

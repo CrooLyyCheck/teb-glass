@@ -9,7 +9,11 @@ export default function ContactSection({ heading, body, cta, note }) {
           <h2 id="contact-heading">{heading}</h2>
           <p>{body}</p>
           <a href={cta.href} className="btn contact__cta">{cta.label}</a>
-          {note && <p className="contact__note">{note}</p>}
+          {note && (
+            <p className="contact__note">
+              <strong>Dlaczego bez formularza?</strong> {note}
+            </p>
+          )}
         </div>
       </div>
     </section>

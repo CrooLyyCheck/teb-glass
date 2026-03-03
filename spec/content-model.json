@@ -79,7 +79,7 @@
       "contact": {
         "heading": "Skontaktuj się ze mną",
         "body": "Chcesz dowiedzieć się więcej lub nawiązać kontakt? Napisz bezpośrednio do mnie!",
-        "noFormReason": "Strona nie zawiera formularza internetowego głównie ze względu na Spam i Boty: masowe wysyłanie formularzy kontaktowych przeciąża serwer i zaśmieca skrzynki mailowe.",
+        "noFormReason": "Strona nie zawiera formularza internetowego (głownie Spam i Boty: Masowe wysyłanie formularzy kontaktowych, przeciążające serwer i zaśmiecające skrzynki mailowe).",
         "cta": {
           "label": "Napisz do mnie",
           "href": "mailto:dla.szkoly2023@gmail.com"
