@@ -40,7 +40,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ steps.image.outputs.name }}
           tags: |
-            type=raw,value=latest
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=latest-noncms,enable=${{ github.ref == 'refs/heads/non-cms' }}
             type=sha,prefix=sha-
 
       - name: Build and push
