@@ -2,7 +2,7 @@
   "site": {
     "name": "🐇",
     "logo": {
-      "src": "https://teb.croolyy.com/wp-content/uploads/2026/02/4775505-1.png",
+      "src": "/uploads/2026/02/4775505-1.png",
       "alt": "🐇"
     },
     "nav": [
@@ -34,11 +34,11 @@
       "gallery": {
         "heading": "Galeria",
         "images": [
-          "https://teb.croolyy.com/wp-content/uploads/2026/02/nBU5yh-1-1024x640.webp",
-          "https://teb.croolyy.com/wp-content/uploads/2026/02/HD-wallpaper-cute-bunnies-cute-rabbit-flower-bunny-rodent.jpg",
-          "https://teb.croolyy.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-24-at-14.25.59-1024x463.jpeg",
-          "https://teb.croolyy.com/wp-content/uploads/2026/02/weird_wonderful_bunnies_header_update_1140.avif",
-          "https://teb.croolyy.com/wp-content/uploads/2026/02/thumb-1920-789721-1-1024x683.jpg"
+          "/uploads/2026/02/nBU5yh-1-1024x640.webp",
+          "/uploads/2026/02/HD-wallpaper-cute-bunnies-cute-rabbit-flower-bunny-rodent.jpg",
+          "/uploads/2026/02/WhatsApp-Image-2026-02-24-at-14.25.59-1024x463.jpeg",
+          "/uploads/2026/02/weird_wonderful_bunnies_header_update_1140.avif",
+          "/uploads/2026/02/thumb-1920-789721-1-1024x683.jpg"
         ]
       }
     },
@@ -51,7 +51,7 @@
         "heading": "O mnie - Angelina Vysotska",
         "subheading": "Kim jestem?",
         "body": "Pasjonatką fotografii z niezwykłym podejściem do każdej sesji. Urodziłam się w sercu miasta, gdzie odkryłam swoją miłość do fotografii.",
-        "photo": "https://teb.croolyy.com/wp-content/uploads/2026/02/476867363_1160451335865522_1501422884474309151_n.jpg"
+        "photo": "/uploads/2026/02/476867363_1160451335865522_1501422884474309151_n.jpg"
       },
       "timeline": {
         "heading": "Oś czasu - Kluczowe wydarzenia z mojego życia",
