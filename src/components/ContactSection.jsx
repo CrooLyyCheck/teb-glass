@@ -1,6 +1,6 @@
 import { useFadeIn } from '../hooks/useFadeIn'
 import './ContactSection.css'
-export default function ContactSection({ heading, body, cta }) {
+export default function ContactSection({ heading, body, cta, note }) {
   const ref = useFadeIn()
   return (
     <section className="contact" aria-labelledby="contact-heading" ref={ref}>
@@ -9,6 +9,7 @@ export default function ContactSection({ heading, body, cta }) {
           <h2 id="contact-heading">{heading}</h2>
           <p>{body}</p>
           <a href={cta.href} className="btn contact__cta">{cta.label}</a>
+          {note && <p className="contact__note">{note}</p>}
         </div>
       </div>
     </section>
