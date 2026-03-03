@@ -8,7 +8,10 @@ export default function ContactSection({ heading, body, cta, note }) {
         <div className="contact__card glass-card">
           <h2 id="contact-heading">{heading}</h2>
           <p>{body}</p>
-          <a href={cta.href} className="btn contact__cta">{cta.label}</a>
+          <div className="contact__actions">
+            <a href={cta.href} className="btn contact__cta">{cta.label}</a>
+            <a href="tel:112" className="btn contact__cta">Zadzwoń do mnie</a>
+          </div>
           {note && (
             <p className="contact__note">
               <strong>Dlaczego bez formularza?</strong> {note}
